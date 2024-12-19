@@ -16,7 +16,7 @@ The PH-Tree implementation is in the `external/phtree` folder.
 
 You will need [meson](https://mesonbuild.com/Getting-meson.html) and [ninja](https://ninja-build.org/) to build this project.
 
-You will also need [Raylib](https://github.com/raysan5/raylib).  Build Raylib and place `libraylib.a` in `external/raylib`.
+You will also need [Raylib](https://github.com/raysan5/raylib).  Build Raylib and place `libraylib.a` in `external/raylib` (or whatever you have to do to make Raylib work).
 
 **Build**
 
