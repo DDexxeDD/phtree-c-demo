@@ -151,6 +151,7 @@ int main ()
 		.a = 255
 	};
 
+	bool box_select_active = false;
 	Vector2 box_select_min = {0.0f, 0.0f};
 	Vector2 box_select_max = {0.0f, 0.0f};
 	demo_query_t* box_query = query_create (box_select_min, box_select_max);
@@ -163,6 +164,7 @@ int main ()
 
 		if (IsMouseButtonPressed (MOUSE_BUTTON_LEFT))
 		{
+			box_select_active = true;
 			box_select_min = mouse_position;
 			box_select_max = mouse_position;
 			box_select_origin = mouse_position;
@@ -205,6 +207,7 @@ int main ()
 		if (IsKeyPressed (KEY_SPACE))
 		{
 			query_clear (box_query);
+			box_select_active = false;
 		}
 
 		BeginDrawing ();
@@ -250,7 +253,10 @@ int main ()
 				}
 			}
 
-			DrawRectangleLines (box_select_min.x, box_select_min.y, box_select_max.x - box_select_min.x, box_select_max.y - box_select_min.y, BLUE);
+			if (box_select_active)
+			{
+				DrawRectangleLines (box_select_min.x, box_select_min.y, box_select_max.x - box_select_min.x, box_select_max.y - box_select_min.y, BLUE);
+			}
 		}
 		EndDrawing ();
 	}
