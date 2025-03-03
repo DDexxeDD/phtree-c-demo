@@ -7,7 +7,7 @@ An explanation of the PH-Tree can be found [here](https://tzaeschke.github.io/ph
 
 ## About
 
-This is a demonstration of a multimap PH-Tree.  The entries in the tree represent 64x64 pixel cells, which store references to 2D points.  Points are randomly generated, and placed in the proper cell on creation.
+This is a demonstration of using a PH-Tree as a spatial hash.  The entries in the tree represent 64x64 pixel cells, which store references to 2D points.  Points are randomly generated, and placed in the proper cell on creation.
 
 The PH-Tree implementation is in the `external/phtree` folder.
 
@@ -16,7 +16,7 @@ The PH-Tree implementation is in the `external/phtree` folder.
 
 You will need [meson](https://mesonbuild.com/Getting-meson.html) and [ninja](https://ninja-build.org/) to build this project.
 
-You will also need [Raylib](https://github.com/raysan5/raylib).  Build Raylib and place `libraylib.a` in `external/raylib` (or whatever you have to do to make Raylib work).
+You will also need [Raylib](https://github.com/raysan5/raylib).  Build Raylib and install it, or place `libraylib.a` in `external/raylib`.
 
 **Build**
 

@@ -1,3 +1,4 @@
 source_files += files (
-  'phtree.c',
+  'phtree32_common.c',
+  'phtree32_2d.c',
 )
